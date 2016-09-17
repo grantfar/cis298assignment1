@@ -2,5 +2,6 @@
     <string name="app_name">CIS298Assignment1</string>
 
     <string name="hello_world">Hello world!</string>
+    <string name="display_String">Dont Go Over 20</string>
     <string name="action_settings">Settings</string>
 </resources>
