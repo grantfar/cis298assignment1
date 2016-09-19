@@ -32,13 +32,13 @@ public class CounterActivity extends AppCompatActivity {
         mAdditionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //displays Toast if counter is going to be equal to 20
+                if(counterInt == 19)
+                {
+                    Toast.makeText(CounterActivity.this,"20",Toast.LENGTH_SHORT).show();
+                }
                 counterInt++;
                 mDisplayText.setText((Integer.toString( counterInt)));
-                //displays Toast if counter is  greater than +-20
-                if(counterInt > 20 || counterInt < -20)
-                {
-                    Toast.makeText(CounterActivity.this,Integer.toString( counterInt),Toast.LENGTH_SHORT).show();
-                }
             }
         });
         //Decreases Counter when - button is clicked
@@ -47,11 +47,6 @@ public class CounterActivity extends AppCompatActivity {
             public void onClick(View v) {
                 counterInt--;
                 mDisplayText.setText((Integer.toString( counterInt)));
-                //displays Toast if counter is  greater than =-20
-                if(counterInt > 20 || counterInt < -20)
-                {
-                    Toast.makeText(CounterActivity.this,Integer.toString( counterInt),Toast.LENGTH_SHORT).show();
-                }
             }
         });
     }
