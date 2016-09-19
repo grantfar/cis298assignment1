@@ -19,27 +19,35 @@ public class CounterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_counter);
+        //Increment button
         mMinusButton = (Button) findViewById(R.id.minusButton);
+        //Decrement button
         mAdditionButton = (Button) findViewById(R.id.plusButton);
+        //The display for counter
         mDisplayText = (TextView) findViewById(R.id.displayTextView);
+        //what counter is at
         counterInt = 0;
         mDisplayText.setText("0");
+        //Increases Counter when + button is clicked
         mAdditionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 counterInt++;
                 mDisplayText.setText((Integer.toString( counterInt)));
+                //displays Toast if counter is  greater than +-20
                 if(counterInt > 20 || counterInt < -20)
                 {
                     Toast.makeText(CounterActivity.this,Integer.toString( counterInt),Toast.LENGTH_SHORT).show();
                 }
             }
         });
+        //Decreases Counter when - button is clicked
         mMinusButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 counterInt--;
                 mDisplayText.setText((Integer.toString( counterInt)));
+                //displays Toast if counter is  greater than =-20
                 if(counterInt > 20 || counterInt < -20)
                 {
                     Toast.makeText(CounterActivity.this,Integer.toString( counterInt),Toast.LENGTH_SHORT).show();
