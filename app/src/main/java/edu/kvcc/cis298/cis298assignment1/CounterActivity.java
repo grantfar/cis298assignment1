@@ -33,9 +33,9 @@ public class CounterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //displays Toast if counter is going to be equal to 20
-                if(counterInt == 19)
+                if(counterInt == 20)
                 {
-                    Toast.makeText(CounterActivity.this,"20",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CounterActivity.this,"21!",Toast.LENGTH_SHORT).show();
                 }
                 counterInt++;
                 mDisplayText.setText((Integer.toString( counterInt)));
